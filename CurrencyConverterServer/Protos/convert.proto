@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option csharp_namespace = "CurrencyConverterServer";
+
+package convert;
+
+service Converter {
+  rpc ToText (ConvertRequest) returns (ConvertReply);
+}
+
+message ConvertRequest {
+  string value = 1;
+}
+
+message ConvertReply {
+  string result = 1;
+}
